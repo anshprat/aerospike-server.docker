@@ -32,7 +32,7 @@ VOLUME ["/opt/aerospike/data"]
 #   3002 – mesh port, for cluster heartbeat
 #   3003 – info port
 #
-EXPOSE 3000 3001 3002 3003
+EXPOSE 3000 3001 3002 3003 9918
 
 # Execute the run script
 # We use the `ENTRYPOINT` because it allows us to forward additional
