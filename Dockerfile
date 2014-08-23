@@ -14,7 +14,7 @@ WORKDIR /tmp
 
 # Install Aerospike
 RUN \
-  apt-get update -y \
+  sudo apt-get update -y \
   && tar xzf aerospike.tgz \
   && cd aerospike-server-community-* \
   && sudo dpkg -i aerospike-server-* 
