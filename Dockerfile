@@ -14,7 +14,10 @@ WORKDIR /tmp
 
 # Install Aerospike
 RUN \
-  sudo dpkg -i http://us2.citrusleaf.net/files/aerospike-server-community-3.3.12-ubuntu12.04/aerospike-server-community-3.3.12.ubuntu12.04.x86_64.deb 
+  apt-get update -y \
+  && tar xzf aerospike.tgz \
+  && cd aerospike-server-community-* \
+  && sudo dpkg -i aerospike-server-* 
 
 # Add the Aerospike configuration specific to this dockerfile
 ADD aerospike.conf /etc/aerospike/aerospike.conf
